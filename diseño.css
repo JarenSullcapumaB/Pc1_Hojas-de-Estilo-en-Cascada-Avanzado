@@ -1,0 +1,105 @@
+/* Pregunta 1 */
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 200px;
+    grid-template-rows: 60px;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+}
+
+.header {
+    grid-area: header;
+    background: #26c5ce;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #4f7adf;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(243, 220, 190);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Pregunta 2: Contenedor Flexbox */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cards div {
+    flex: 1;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    padding: 50px;
+}
+
+.card1 {
+    background-color: #7f60f5;
+    color: white;
+    box-shadow: 2px 2px 5px #313233;
+}
+
+.card2 {
+    background-color: #29c6ce;
+    color: white;
+}
+
+.card3 {
+    background-color: #5474dd;
+    color: white;
+}
+
+.card4 {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ddd;/
+}
+
+.widget1, .widget2 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    
+    min-height: 250px;      
+    padding: 20px;
+    font-size: 1.5rem;       
+
+    display: flex;
+    align-items: center;     
+    justify-content: center;  
+    color: #555;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.05); 
+}
+
+
+
+.footer {
+    grid-area: footer;
+    background: #3a3a3a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+/* Pregunta 3: Responsividad para móviles */
+@media (max-width: 767px) {
+    .cards {
+        flex-direction: column;
+    }
+}
+
